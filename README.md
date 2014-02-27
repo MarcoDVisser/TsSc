@@ -9,6 +9,9 @@ This is why I am compiling them
 here, with a shell script that will automatically pull the updates versions
 when needed. This is mostly for personal use, though  somebody may find it useful.
 
+The repro also contains a growing list of generic templates, and will
+grow with time.
+
 ## Installation
 
 Just download the [zip](https://github.com/MarcoDVisser/TsSc/zipball/master) 
