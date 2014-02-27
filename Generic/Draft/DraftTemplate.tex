@@ -1,0 +1,105 @@
+% A generic draft manuscript template
+% Setup my Marco D Visser
+
+% Use only LaTeX2e, calling the article.cls class and 12-point type.
+
+\documentclass[12pt]{article}
+
+
+\usepackage{times} %% Use times if you have the font installed
+\usepackage{lineno} % Get line numbering, found in texlive-humanities debian 
+\usepackage{lipsum} % a LaTeX package to insert paragraphs of dummy (latin)
+\usepackage[round]{natbib} % I want to use bibtex
+\usepackage{graphicx} % I want to include graphics
+\usepackage{color} % I want to use color to highlight comments
+\usepackage{authblk} % Multiple authors and intitutions
+\usepackage{pdflscape} % I want certain sections as a landscape
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{sectsty} % Allows customizing section commands
+\usepackage{url}     % I want to ut urls in the text and dont want latex complaining
+\usepackage[utf8]{inputenc} % this fixes some problems with non-ASCII characters
+
+% The following parameters seem to provide a reasonable page setup.
+
+\topmargin 0.0cm
+\oddsidemargin 0.2cm
+\textwidth 16cm 
+\textheight 21cm
+\footskip 1.0cm
+% Include your paper's title here
+
+
+\title{A simple {\it Draft Manuscript\/} Template} 
+\author[1,2]{Jane Doe\thanks{m.visser@science.ru.nl}}
+\author[3]{John Joe\thanks{mcmahons@si.edu}}
+\author[4,5]{Bob Smith\thanks{cory.merow@gmail.com}}
+
+\affil[1]{Departments of Something, Some University, some country}
+\affil[2]{Some Science Institute (SSI)}
+\affil[3]{Another Science Institute (ASI)}
+\affil[4]{Yet Another Science Institute (YASS)}
+\affil[5]{Department of Sciency stuff, Backwater State University}
+
+\date{\today}
+
+%%%%%%%%%%%%%%%%% END OF PREAMBLE %%%%%%%%%%%%%%%%
+
+
+
+\begin{document} 
+\maketitle
+% Double-space the manuscript.
+\baselineskip24pt
+
+\begin{abstract}
+\lipsum[1]
+\end{abstract}
+\clearpage
+
+\section*{Introduction}
+% Start Linenumbers 
+\linenumbers
+\lipsum[2-5]
+
+\section*{Methods}
+\lipsum[1]
+
+\begin{equation}
+	\begin{split}
+    {dx_1 \over dt} = r_1x_1\left(1-\left({x_1+\alpha_{12}x_2 \over K}\right) \right) \\
+    {dx_2 \over dt} = r_2x_2\left(1-\left({x_2+\alpha_{21}x_1 \over K}\right) \right). 
+	\end{split}
+\end{equation}
+
+\lipsum[5]
+
+\section*{Results}
+
+\lipsum[6-7]
+
+\section*{Discussion}
+
+\lipsum[8-11]
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
