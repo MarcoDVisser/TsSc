@@ -1,0 +1,116 @@
+%% example from yihui 
+%% https://github.com/yihui/knitr-examples/blob/master/074-example-environment.Rnw
+
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+\usepackage{amsthm}
+\newtheorem{rexample}{R Example}[section]
+
+\title{Using the Example Environment with knitr}
+\author{Yihui Xie}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+\maketitle
+
+
+
+
+\section{Introduction}
+
+This is a test of the R Example environment.
+
+\subsection{Go!}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{rexample}\label{test-a}\hfill{}\begin{alltt}
+\hlnum{1} \hlopt{+} \hlnum{1}
+\end{alltt}
+\begin{verbatim}
+## [1] 2
+\end{verbatim}
+\end{rexample}\end{kframe}
+\end{knitrout}
+
+
+Look at Example \ref{test-a}!
+
+\subsection{Ha!}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{rexample}\label{test-b}\hfill{}\begin{alltt}
+\hlstd{x} \hlkwb{=} \hlkwd{rnorm}\hlstd{(}\hlnum{10}\hlstd{)}
+\end{alltt}
+\end{rexample}\end{kframe}
+\end{knitrout}
+
+
+Move on!
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{rexample}\label{test-c}\hfill{}\begin{alltt}
+\hlkwd{sd}\hlstd{(x)}  \hlcom{# standard deviation}
+\end{alltt}
+\begin{verbatim}
+## [1] 1.064
+\end{verbatim}
+\end{rexample}\end{kframe}
+\end{knitrout}
+
+
+How about \ref{test-b} and \ref{test-c}?
+
+If you want to use this R Example environment for all code chunks, make rexample a global chunk option in the setup chunk.
+
+\end{document}
